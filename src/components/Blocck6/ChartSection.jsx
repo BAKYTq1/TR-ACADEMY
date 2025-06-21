@@ -21,7 +21,7 @@ function ChartSection() {
   }, []);
 
   return (
-    <section className="chart-section">
+    <section className="chart-section container">
       <h2 className="chart-title">ЧТО ТЫ ПОЛУЧИШЬ</h2>
 
       {!isMobile ? (
