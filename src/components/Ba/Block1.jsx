@@ -21,7 +21,7 @@ const Banner = () => {
             <button>ЗАПИСАТЬСЯ</button>
           </div>
           <div className="banner-right">
-            <div className="blur-circle" />
+            <div className="" />
             <img src={banner} alt="Трейдинг и технологии" />
           </div>
         </div>
