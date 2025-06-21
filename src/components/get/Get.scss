@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1068px !important;
+    margin: 0 auto;
+    // padding: 60px 40px;
+}
+
+/* Заголовок О КУРСЕ */
+.header-section {
+    margin-top: 100px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 93px;
+    font-weight: 800;
+    color: #FFA500;
+    letter-spacing: 0px;
+    margin-bottom: 0;
+}
+
+/* Основной контент */
+.main-content {
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.info-block {
+    background: transparent;
+}
+
+.info-block h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.info-block ul {
+    list-style: none;
+}
+
+.info-block li {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.info-block li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.differences-section {
+    justify-content: space-between;
+    align-items: center;
+    display: flex; 
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.section-title {
+    font-size: 109.73px;
+    font-weight: 800;
+    color: #FFA500;
+    line-height: 68.78px;
+    span{
+        font-size: 60px;
+        line-height: 68px;
+    }
+}
+
+.question-mark {
+    color: #FFA500;
+}
+
+.differences-content {
+    max-width: 500px;
+    line-height: 170%;
+}
+
+.differences-content p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding-left: 25px;
+}
+
+// .differences-content p::before {
+//     content: "•";
+//     position: absolute;
+//     left: 0;
+//     color: #FFA500;
+//     font-size: 20px;
+//     font-weight: bold;
+// }
+
+/* Секция ЧТО ТЫ ПОЛУЧИШЬ */
+.benefits-section {
+    margin-bottom: 80px;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 80px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FFA500 0%, #FFD700 100%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    display: inline-block;
+    width: calc(16.666% - 10px);
+    margin-right: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+.timeline-item:last-child {
+    margin-right: 0;
+}
+
+.timeline-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #FFA500, #FFD700);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: #000000;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+}
+
+.timeline-text {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.3;
+    max-width: 140px;
+    margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    
+    .main-title {
+        font-size: 56px;
+        letter-spacing: 6px;
+    }
+    
+    .section-title {
+        font-size: 68px;
+        span{
+            font-size: 45px !important;
+        }
+    }
+    
+    .content-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .differences-section{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .main-title {
+        font-size: 42px;
+        letter-spacing: 4px;
+    }
+    
+    .section-title {
+        width: 100%;
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    .content-grid {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+    }
+    
+    .info-block h2 {
+        font-size: 20px;
+    }
+    
+    .info-block li {
+        font-size: 15px;
+    }
+    
+    .differences-content p {
+        font-size: 16px;
+    }
+    
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        max-width: 300px;
+        position: relative;
+    }
+    
+    .timeline-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 40px;
+        background: linear-gradient(180deg, #FFA500, #FFD700);
+    }
+    
+    .timeline-text {
+        font-size: 16px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .main-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .info-block h2 {
+        font-size: 18px;
+    }
+    
+    .info-block li {
+        font-size: 14px;
+    }
+    
+    .differences-content p {
+        font-size: 15px;
+    }
+    
+    .timeline-number {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .timeline-text {
+        font-size: 14px;
+    }
+}
+
+/* Дополнительные стили для точного соответствия */
+.left-column, .right-column {
+    position: relative;
+}
+
+/* Анимации для плавности */
+.timeline-number {
+    transition: transform 0.3s ease;
+}
+
+.timeline-number:hover {
+    transform: scale(1.1);
+}
+
+.info-block li,
+.differences-content p {
+    transition: color 0.3s ease;
+}
+
+.info-block li:hover,
+.differences-content p:hover {
+    color: #FFA500;
+}
