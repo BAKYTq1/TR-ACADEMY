@@ -13,7 +13,7 @@
   align-items: center;
   padding: 20px; 
   box-sizing: border-box;
-
+overflow: hidden;
   .scale-wrapper {
     transform-origin: top center;
     transition: transform 0.3s ease;
@@ -84,7 +84,6 @@ font-size: 27px;
         justify-content: center;
         align-items: center;
         width: 50%; 
-      overflow: hidden;
         div {
           // width: clamp(400px, 40vw, 615px); 
           // height: clamp(400px, 40vw, 615px);
